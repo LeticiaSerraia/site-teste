@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão Segura - Guia Completo de Segurança Digital</title>
+
+  <!-- Ligação com o arquivo de estilos CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar">
+    <div class="brand-title" onclick="switchTab('home')">🛡️ CONEXÃO SEGURA</div>
+    <nav class="nav-tabs">
+      <button class="nav-btn active" id="btn-home" onclick="switchTab('home')">Início / Panorama</button>
+      <button class="nav-btn" id="btn-mulheres" onclick="switchTab('mulheres')">Mulheres</button>
+      <button class="nav-btn" id="btn-idosos" onclick="switchTab('idosos')">Idosos</button>
+      <button class="nav-btn" id="btn-criancas" onclick="switchTab('criancas')">Crianças</button>
+      <button class="nav-btn" id="btn-geral" onclick="switchTab('geral')">Golpes & IA</button>
+      <button class="nav-btn" id="btn-senhas" onclick="switchTab('senhas')">Senhas</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- PÁGINA INICIAL / PANORAMA GERAL DO RELATÓRIO TÉCNICO -->
+    <section id="tab-home" class="page-section active">
+      <h1 class="hero-title">Proteção, Consciência e Cidadania Digital</h1>
+      <p class="hero-subtitle">
+        <strong> Voltada a educar, prevenir golpes de engenharia social e proteger diferentes públicos no
+          ciberespaço.</strong>
+      </p>
+
+      <!-- DADOS OFICIAIS EXTRAÍDOS DO RELATÓRIO TÉCNICO -->
+      <div class="grid-4" style="margin-bottom: 2.5rem;">
+        <div class="card">
+          <span class="badge badge-danger">IBDFAM 2025</span>
+          <div class="stat-number">+28,4%</div>
+          <p>Crescimento expressivo no volume total de crimes cibernéticos registrados em território nacional.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-danger">Pesquisa G1</span>
+          <div class="stat-number">83,2%</div>
+          <p>Da população brasileira teme ser vítima de fraudes financeiras e golpes via WhatsApp ou celular.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">DataSenado</span>
+          <div class="stat-number">27%</div>
+          <p>Jovens entre 16 e 29 anos são a maior parcela das vítimas de golpes virtuais, seguidos por idosos (16%).
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge badge-danger">Agência Senado</span>
+          <div class="stat-number">+224,9%</div>
+          <p>Aumento em denúncias de violência, misoginia e discriminação direcionadas a mulheres na internet.</p>
+        </div>
+      </div>
+
+      <!-- APRESENTAÇÃO DO PROJETO E OBJETIVOS DO DOCUMENTO -->
+      <div class="grid-2" style="margin-bottom: 2.5rem;">
+        <div class="card">
+          <span class="badge badge-cyan">Segurança </span>
+          <h3>🎯Cautela e prevenção:</h3>
+
+         <p> A segurança na internet é uma necessidade para todos, desde quem usa o celular apenas para trocar mensagens
+          com a família até quem realiza transações financeiras o dia inteiro online. Independentemente do seu nível
+          de experiência com a tecnologia, adotar hábitos preventivos é a melhor forma de proteger seus dados e o seu
+          dinheiro.
+         </p>
+         <p>
+          A regra básica para navegar com tranquilidade é a cautela: um minuto de atenção antes de preencher um
+          formulário ou baixar um arquivo evita horas de dor de cabeça tentando recuperar o controle das suas contas.
+
+          </p>
+          <ul style="margin-top: 0.8rem;">
+            <li>
+              Ative a verificação em duas etapas em todas as suas contas para ter uma camada extra de proteção além da senha.
+            </li>
+            <li>
+              Desconfie de pressa ou ofertas milagrosas, pois golpistas usam urgência (falsos bloqueios de conta ou pedidos de Pix) para fazer você agir por impulso.
+            </li>
+            <li>
+              Evite Wi-Fi público para acessar bancos ou digitar senhas importantes.
+            </li>
+            <li>
+              Proteja seus dados pessoais (como CPF e endereço) e só os forneça quando estritamente necessário.
+            </li>
+            <li>
+              Mantenha celulares e computadores atualizados para corrigir falhas do sistema contra vírus e invasões.
+            </li>
+            <li>Divulgar canais oficiais de acolhimento e denúncia (180, 190, 100, SaferNet).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-success">Pilares da Plataforma</span>
+          <h3>🧭 Navegação por Públicos & Temas</h3>
+          <p>
+            O portal organiza seus conteúdos de acordo com as necessidades e pontos de vulnerabilidade de cada faixa
+            etária e perfil:
+          </p>
+          <div class="grid-2" style="gap: 0.8rem; margin-top: 1rem;">
+            <div class="card hover-card" style="padding: 0.8rem;" onclick="switchTab('senhas')">
+              <strong style="color: var(--neon-green);">🔑 Senhas</strong>
+              <p style="font-size: 0.8rem;">Testador interativo e regras de proteção de contas.</p>
+            </div>
+            <div class="card hover-card" style="padding: 0.8rem;" onclick="switchTab('mulheres')">
+              <strong style="color: #f472b6;">👩 Mulheres</strong>
+              <p style="font-size: 0.8rem;">Combate a vazamentos, deepfakes e acolhimento.</p>
+            </div>
+            <div class="card hover-card" style="padding: 0.8rem;" onclick="switchTab('idosos')">
+              <strong style="color: #60a5fa;">👴 Idosos</strong>
+              <p style="font-size: 0.8rem;">Falsos servidores do INSS e bancos pelo WhatsApp.</p>
+            </div>
+            <div class="card hover-card" style="padding: 0.8rem;" onclick="switchTab('criancas')">
+              <strong style="color: #facc15;">👶 Crianças</strong>
+              <p style="font-size: 0.8rem;">Jogos seguros, estranhos e a regra do adulto de confiança.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <!-- QUIZ INTERATIVO BASEADO NO TCC -->
+      <h2 style="text-align: center; margin-bottom: 0.4rem; color: #fff;">🧠 Quiz de Conscientização Digital</h2>
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        Teste seus reflexos de segurança contra as fraudes mais comuns abordadas no projeto.
+      </p>
+
+      <div class="quiz-box">
+        <div id="quiz-q" style="font-weight: 700; font-size: 1.15rem; color: #fff;"></div>
+        <div class="quiz-options" id="quiz-opts"></div>
+        <div class="quiz-feedback" id="quiz-feed"></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 1: SENHAS -->
+    <section id="tab-senhas" class="page-section">
+      <h1 class="hero-title">Senhas: Proteja Seu Mundo Digital</h1>
+      <p class="hero-subtitle">Sua senha é a chave de entrada dos seus dados pessoais, bancários e sociais. Aprenda a
+        blindar seus acessos.</p>
+
+      <div class="tester-wrapper">
+        <h3 style="color: #fff; margin-bottom: 0.4rem;">🧪 Testador & Gerador de Senhas</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Teste o nível de força da sua combinação ou gere uma
+          blindada instantaneamente.</p>
+
+        <div class="input-box">
+          <input type="password" id="inputPass" placeholder="Digite uma senha..." oninput="evaluatePassword()">
+          <button id="toggleBtn" onclick="togglePassView()">👁️</button>
+        </div>
+
+        <div class="meter-bar">
+          <div id="meter-fill"></div>
+        </div>
+
+        <div id="passVerdict" style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.8rem;">Digite uma senha</div>
+
+        <div class="check-rules">
+          <p id="rule-len">⚪ Mínimo de 8 caracteres</p>
+          <p id="rule-upper">⚪ Contém letra maiúscula</p>
+          <p id="rule-lower">⚪ Contém letra minúscula</p>
+          <p id="rule-num">⚪ Contém número</p>
+          <p id="rule-sym">⚪ Contém símbolo especial (!@#$...)</p>
+        </div>
+
+        <button class="btn-action" onclick="generateStrongPass()">🔑 Gerar Senha Segura Aleatória</button>
+        <div id="passBox"
+          style="display:none; margin-top:1rem; padding:0.8rem; background:#062313; border:1px solid #10b981; border-radius:8px; color:#4ade80; font-weight:bold; word-break:break-all;">
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+          <span class="badge badge-danger">Perigo</span>
+          <h3>❌ Senhas Fracas & Comuns</h3>
+          <p>Fáceis de adivinhar ou quebrar em segundos por dicionários automatizados:</p>
+          <ul>
+            <li><strong>123456:</strong> Sequências numéricas óbvias.</li>
+            <li><strong>password / senha:</strong> Palavras de dicionário comuns.</li>
+            <li><strong>qwerty:</strong> Teclas contíguas do teclado.</li>
+            <li><strong>mae123 / data de aniversário:</strong> Dados pessoais facilmente descobertos em redes sociais.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-color: rgba(74, 222, 128, 0.4);">
+          <span class="badge badge-success">Recomendado</span>
+          <h3>✅ Senhas Fortes & Seguras</h3>
+          <p>Combinações longas que demandam décadas para ataques de força bruta:</p>
+          <ul>
+            <li><strong>A7m!P$9xLz:</strong> Alternância de caixa, números e símbolos sem sentido explícito.</li>
+            <li><strong>Tr@balh0#2026:</strong> Variação inteligente com caracteres substitutos.</li>
+            <li><strong>Gato&Sol*27Amor:</strong> Frase-passe (passphrase) longa e fácil de memorizar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="grid-4">
+        <div class="card">
+          <span class="badge badge-warning">Regra 1</span>
+          <h3>Não Reutilize</h3>
+          <p>Nunca use a mesma chave para redes sociais e conta bancária. Se um site vazar, todas as suas contas caem.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Regra 2</span>
+          <h3>Gerenciadores</h3>
+          <p>Armazene credenciais em cofres criptografados (Bitwarden, 1Password ou ferramentas integradas).</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Regra 3</span>
+          <h3>Autenticação 2FA</h3>
+          <p>Ative a verificação em duas etapas via aplicativo autenticador em todas as contas essenciais.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Regra 4</span>
+          <h3>Atualização</h3>
+          <p>Altere acessos imediatamente se receber alerta de vazamento ou notar movimentações atípicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 2: SEGURANÇA DA MULHER -->
+    <section id="tab-mulheres" class="page-section">
+      <h1 class="hero-title">Segurança da Mulher na Internet</h1>
+      <p class="hero-subtitle">Conectada, informada e protegida. Combate a crimes virtuais, vazamentos não consensuais e
+        deepfakes.</p>
+
+      <div class="grid-3" style="margin-bottom: 2rem;">
+        <div class="card">
+          <div class="stat-number">16.725</div>
+          <p>Ocorrências de violência virtual contra mulheres registradas pelo Ligue 180 no início de 2026 (+188,6%).
+          </p>
+        </div>
+        <div class="card">
+          <div class="stat-number">8,8 Mi</div>
+          <p>Brasileiras com mais de 16 anos que relataram ter sofrido violência digital em levantamento do Senado.</p>
+        </div>
+        <div class="card">
+          <div class="stat-number">Deepfakes</div>
+          <p>12% das ativistas relataram compartilhamento não consensual e 6% foram alvo de deepfakes geradas por IA
+            (ONU Mulheres).</p>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <h4 style="color: #fff; margin-bottom: 0.3rem;">❤️ Princípio Fundamental: A Culpa Nunca é da Vítima</h4>
+        <p>Quem invade dispositivos, vaza fotos íntimas, extorque ou manipula fotos alheias é o criminoso. A vítima
+          jamais deve ser culpabilizada ou hesitar em buscar ajuda.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="badge badge-danger">Principais Ameaças</span>
+          <h3>Riscos Direcionados</h3>
+          <ul>
+            <li><strong>Chantagem e Sextorsão:</strong> Criminosos cobram quantias sob ameaça de divulgação de conversas
+              ou mídias privadas.</li>
+            <li><strong>Clonagem de Linha e SIM Swap:</strong> Sequestro do chip celular para assumir controle de contas
+              e aplicar golpes na rede de contatos.</li>
+            <li><strong>Perseguição (Stalking):</strong> Monitoramento intrusivo através de checagem de check-ins e
+              marcações em tempo real.</li>
+            <li><strong>Montagens por IA:</strong> Uso não consentido de fotos de perfil para criar montagens explícitas
+              por ferramentas generativas.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-success">Protocolo de Defesa</span>
+          <h3>O Que Fazer em Caso de Ataque</h3>
+          <ul>
+            <li><strong>Não Ceda a Pagamentos:</strong> Negociar com golpistas costuma desencadear novas exigências
+              financeiras.</li>
+            <li><strong>Preserve as Provas:</strong> Colete capturas de tela com horários, datas completas, links de
+              perfis e número de telefone.</li>
+            <li><strong>Denuncie na Plataforma:</strong> Reporte imediatamente conteúdos ofensivos ou vazados pelas
+              centrais dos aplicativos.</li>
+            <li><strong>Procure a DEAM:</strong> Registre Boletim de Ocorrência na Delegacia Eletrônica ou na Delegacia
+              da Mulher.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="grid-3">
+        <div class="card" style="text-align: center;">
+          <h3 style="justify-content: center;">📞 Ligue 180</h3>
+          <p>Central de Atendimento à Mulher. Gratuito, anônimo e operando 24 horas por dia.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="justify-content: center;">🚨 Disque 190</h3>
+          <p>Polícia Militar para situações de perigo físico, agressão ou ameaça emergencial.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="justify-content: center;">🌐 SaferNet Brasil</h3>
+          <p>Canal civil especializado no acolhimento de vítimas e remoção de conteúdos ilícitos da rede.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 3: IDOSOS -->
+    <section id="tab-idosos" class="page-section">
+      <h1 class="hero-title">Segurança Digital para a Terceira Idade</h1>
+      <p class="hero-subtitle">Conectado sim, seguro sempre. Dicas para navegar com autonomia e evitar fraudes
+        financeiras e abusos patrimoniais.</p>
+
+      <div class="grid-3" style="margin-bottom: 2rem;">
+        <div class="card">
+          <span class="badge badge-danger">Caso 1: Falso Atendimento INSS</span>
+          <h3>Suposta "Prova de Vida"</h3>
+          <p>Criminosos entram em contato alegando bloqueio de benefício e pedem procedimentos ou dados pelo celular. Em
+            2026, uma aposentada perdeu R$ 44 mil em um golpe desse modelo.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-danger">Caso 2: Falsa Central Bancária</span>
+          <h3>Alerta de Compra Falsa</h3>
+          <p>Golpistas ligam fingindo ser do banco e pedem para confirmar CPF, senha ou baixar aplicativos de
+            "segurança" que na verdade concedem acesso remoto ao aparelho.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-danger">Caso 3: WhatsApp de Parente</span>
+          <h3>"Troquei de Número"</h3>
+          <p>Perfil com foto de filho ou neto finge ter alterado o contato e solicita Pix com urgência para pagar contas
+            imediatas.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <span class="badge badge-success">Orientações de Segurança</span>
+        <h3 style="margin-bottom: 1rem;">🛡️ Boas Práticas Essenciais</h3>
+        <div class="grid-2">
+          <ul>
+            <li><strong>Ligue no Número Gravado:</strong> Sempre confirme ligações ou pedidos de dinheiro telefonando de
+              volta no número que você já tinha salvo na agenda.</li>
+            <li><strong>Bancos não pedem senha:</strong> Nenhuma instituição financeira solicita senhas por telefone nem
+              envia portador para retirar cartões em residências.</li>
+          </ul>
+          <ul>
+            <li><strong>Apoio da Família:</strong> Não culpe nem ridicularize parentes idosos que caírem em fraudes;
+              ofereça suporte paciente.</li>
+            <li><strong>Disque 100:</strong> Canal do Ministério dos Direitos Humanos para denúncias de violência
+              financeira e abusos contra idosos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 4: CRIANÇAS -->
+    <section id="tab-criancas" class="page-section">
+      <h1 class="hero-title">Segurança na Internet para Crianças</h1>
+      <p class="hero-subtitle">Navegar com diversão, amizade e proteção. Um guia amigável para crianças, pais e
+        responsáveis.</p>
+
+      <div class="callout-box" style="border-left-color: var(--neon-green); background: rgba(74, 222, 128, 0.07);">
+        <h3 style="color: #fff; margin-bottom: 0.3rem;">⭐ Regra de Ouro</h3>
+        <p>Se algo na internet te deixar triste, com medo ou confuso, <strong>PARE o que estiver fazendo</strong>, saia
+          da tela e <strong>CONTE IMEDIATAMENTE PARA UM ADULTO DE CONFIANÇA!</strong></p>
+      </div>
+
+      <div class="grid-4" style="margin-bottom: 2rem;">
+        <div class="card">
+          <span class="badge badge-warning">Privacidade</span>
+          <h3>Cuide dos seus Dados</h3>
+          <p>Nunca informe seu nome completo, onde estuda, seu endereço residencial ou telefones para conhecidos de
+            jogos online.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Amizades</span>
+          <h3>Cuidado com Estranhos</h3>
+          <p>Nem todo mundo na web é quem aparenta ser. Jamais marque encontros fora da internet nem envie fotos
+            pessoais.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Brindes Falsos</span>
+          <h3>Moedas e Prêmios Grátis</h3>
+          <p>Desconfie de promessas de itens raros ou moedas virtuais gratuitas em jogos. Geralmente escondem vírus e
+            armadilhas.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-warning">Comportamento</span>
+          <h3>Gentileza e Respeito</h3>
+          <p>Trate colegas online com o mesmo carinho que no colégio. Não pratique bullying virtual nem compartilhe
+            conteúdos ofensivos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge badge-success">O Que Fazer Se Algo Ruim Acontecer?</span>
+        <div class="grid-4" style="margin-top: 1rem; text-align: center;">
+          <div>
+            <h4 style="color: #f87171;">1. PARE 🛑</h4>
+            <p>Interrompa conversas ou feche o aplicativo que causou incômodo.</p>
+          </div>
+          <div>
+            <h4 style="color: #fbbf24;">2. CONTE 🗣️</h4>
+            <p>Avise seus pais, professores ou responsáveis sem medo de castigo.</p>
+          </div>
+          <div>
+            <h4 style="color: #38bdf8;">3. REGISTRE 📱</h4>
+            <p>Peça ajuda para tirar prints das mensagens para comprovar o ocorrido.</p>
+          </div>
+          <div>
+            <h4 style="color: #4ade80;">4. BLOQUEIE 🚩</h4>
+            <p>Denuncie o perfil na plataforma e bloqueie qualquer contato futuro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 5: GOLPES, IA E FRAUDES -->
+    <section id="tab-geral" class="page-section">
+      <h1 class="hero-title">Ameaças Digitais, Golpes & Inteligência Artificial</h1>
+      <p class="hero-subtitle">Engenharia social sofisticada, clonagem vocal por redes neurais e métodos de proteção
+        institucional.</p>
+
+      <div class="grid-4" style="margin-bottom: 2rem;">
+        <div class="card">
+          <div class="stat-number">+28,4%</div>
+          <p>Aumento consolidado nos crimes virtuais no Brasil em 2025 segundo registros do IBDFAM.</p>
+        </div>
+        <div class="card">
+          <div class="stat-number">83,2%</div>
+          <p>Brasileiros que temem fraudes financeiras por ferramentas digitais e mensageiros.</p>
+        </div>
+        <div class="card">
+          <div class="stat-number">27%</div>
+          <p>Jovens de 16 a 29 anos representam a faixa etária mais vitimizada por golpes online.</p>
+        </div>
+        <div class="card">
+          <div class="stat-number">16%</div>
+          <p>Idosos acima de 60 anos alvo de fraudes patrimoniais e clonagens no país.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="badge badge-danger">Engenharia Social Moderna</span>
+          <h3>Técnicas de Manipulação</h3>
+          <ul>
+            <li><strong>Clonagem de Voz com IA:</strong> Captura de pequenas amostras de áudio das redes sociais para
+              sintetizar ligações urgentes de socorro de familiares.</li>
+            <li><strong>Phishing Bancário e Pix:</strong> Criação de páginas e links falsos de supostos sorteios ou
+              pendências tributárias para roubar acessos.</li>
+            <li><strong>Invasão de Contas:</strong> Sequestro de credenciais através de links contaminados e
+              interceptação de SMS de confirmação.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-success">Protocolo de Imunização</span>
+          <h3>Medidas de Proteção Ativa</h3>
+          <ul>
+            <li><strong>Palavra-Chave Familiar:</strong> Crie uma senha verbal secreta com seus familiares próximos para
+              desmascarar áudios de emergência clonados por IA.</li>
+            <li><strong>Validação de Canais:</strong> Ao receber comunicados de bancos ou instituições, use
+              exclusivamente o aplicativo oficial ou site seguro (.gov.br ou .com.br autêntico).</li>
+            <li><strong>Desconfie de Prêmios Fáceis:</strong> Se a vantagem financeira parecer milagrosa demais,
+              trata-se invariavelmente de um golpe cibernético.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ COM CRÉDITOS DO DOCUMENTO TÉCNICO -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4 style="text-align: center;">Conexão Segura</h4>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Conexão Segura. Todos os direitos reservados. Projeto Acadêmico ETEC Matão.</p>
+        </div>
+  </footer>
+
+  <!-- Ligação com o arquivo JavaScript externo (no final do body para carregar a página mais rápido) -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
