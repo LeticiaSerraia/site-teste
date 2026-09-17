@@ -201,3 +201,11 @@ function generateStrongPass() {
   box.style.display = 'block';
   box.innerHTML = '🔐 Senha gerada:<br><span style="font-size:1.1rem; color:#fff;">' + pass + '</span>';
 }
+
+// Permite virar os cards ao tocar em dispositivos móveis (touch)
+document.addEventListener('click', (e) => {
+  const card = e.target.closest('.flip-card');
+  if (card) {
+    card.classList.toggle('flipped');
+  }
+});
