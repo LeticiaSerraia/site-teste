@@ -458,7 +458,7 @@ footer {
 
 /* Indicador sutil de rotação no canto inferior */
 .flip-card-front::after {
-  content: '🔄 Toque / Passe o mouse';
+  /*content: '🔄 Toque / Passe o mouse';*/
   font-size: 0.7rem;
   color: var(--text-muted);
   align-self: flex-end;
