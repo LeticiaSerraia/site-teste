@@ -491,6 +491,15 @@ footer {
    background-blend-mode: screen;
    object-fit: cover;   
 }
+.my-flip-image-2{
+   width: 100%;
+   height: 85%;
+   background-blend-mode: screen;
+   object-fit: cover;   
+   .elemento::-webkit-scrollbar {
+  display: none;
+}
+}
 
 #tab-mulheres {
   background: linear-gradient(180deg, rgba(96, 13, 104, 0.25) 0%, rgba(13, 19, 31, 0.95) 100%);
