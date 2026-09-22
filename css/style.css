@@ -507,3 +507,20 @@ footer {
   border-radius: 16px;
   border: 1px solid rgba(244, 114, 182, 0.3);
 }
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
+  height: 85%;
+   background-blend-mode: screen;
+   object-fit: cover;   
+   .elemento::-webkit-scrollbar {
+  display: none;
+}}
+
+.video-container video {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
