@@ -682,6 +682,18 @@ footer {
 }
 
 /* ================================
+   ABA CRIANÇAS
+   ================================ */
+
+.my-flip-image-3
+{
+  width: auto;
+  height: auto;
+  background-blend-mode: screen;
+  object-fit: cover;
+}
+
+/* ================================
    ABA MULHERES
    ================================ */
 
