@@ -494,7 +494,7 @@
         financeiras.</p>
 
       <!-- FLIP CARDS GOLPES IDOSOS -->
-      <div class="grid-3" style="margin-bottom: 2rem;">
+      <div class="grid-3" style="margin-bottom: 1rem;">
 
         <div class="flip-card">
           <div class="flip-card-inner">
@@ -522,21 +522,21 @@
             <div class="flip-card-back">
               <h3>Como desconfiar de um vídeo feito com IA</h3>
               <ul>
-              </p> Observe principalmente a origem do vídeo e o contexto, e não apenas se o rosto ou a voz parecem
-              reais. Sinais de alerta podem incluir: <p>
+                </p> Observe principalmente a origem do vídeo e o contexto, e não apenas se o rosto ou a voz parecem
+                reais. Sinais de alerta podem incluir: <p>
 
-              </p>promessa de dinheiro fácil ou retorno garantido; <p>
+                </p>promessa de dinheiro fácil ou retorno garantido; <p>
 
-              </p> pedido urgente para clicar em um link ou fazer um pagamento; <p>
+                </p> pedido urgente para clicar em um link ou fazer um pagamento; <p>
 
-              </p> perfil recém-criado ou com informações inconsistentes; <p>
+                </p> perfil recém-criado ou com informações inconsistentes; <p>
 
-              </p> voz com entonação estranha ou movimentos faciais pouco naturais; <p>
+                </p> voz com entonação estranha ou movimentos faciais pouco naturais; <p>
 
-              </p> ausência do mesmo anúncio nos canais oficiais da pessoa; <p>
+                </p> ausência do mesmo anúncio nos canais oficiais da pessoa; <p>
 
-              </p> link ou site com endereço diferente do oficial.</p>
-            </ul>
+                </p> link ou site com endereço diferente do oficial.</p>
+              </ul>
             </div>
           </div>
         </div>
@@ -589,17 +589,17 @@
         </div>
 
         <div class="flip-card">
-        <div class="video-02">
-            <div class="flip-card-front">
-              <div class="video-container">
-                <video controls>
-                    <source src="video/consegue_criar_um_video_com_um.mp4" type="video/mp4" >
-                    Seu navegador não suporta vídeos.
-                </video>
+          <div class="flip-card-front">
+            <div class="video-container">
+              <video controls>
+                <source src="video/consegue_criar_um_video_com_um.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+              </video>
             </div>
           </div>
-        
+
     </section>
+
 
     <!-- ==================== ABA 5: CRIANÇAS ==================== -->
     <section id="tab-criancas" class="page-section">
@@ -612,6 +612,7 @@
         <p>Se algo na internet te deixar triste, com medo ou confuso, <strong>PARE o que estiver fazendo</strong>, saia
           da tela e <strong>CONTE IMEDIATAMENTE PARA UM ADULTO DE CONFIANÇA!</strong></p>
       </div>
+
 
       <!-- FLIP CARDS CRIANÇAS -->
       <div class="grid-4" style="margin-bottom: 2rem;">
@@ -735,6 +736,99 @@
                 mais mensagens.</p>
             </div>
           </div>
+        </div>
+
+      </div>
+      <!-- =====================================================
+     DESAFIO DO DETETIVE DIGITAL
+===================================================== -->
+
+      <div class="kids-game">
+
+        <div class="kids-game-header">
+          <div class="detective-icon">🕵️</div>
+
+          <div>
+            <h2>🕵️ Desafio do Detetive Digital</h2>
+
+            <p>
+              Você consegue descobrir o que fazer para ficar seguro na internet?
+            </p>
+          </div>
+        </div>
+
+        <div class="kids-progress">
+          <div id="kids-progress-bar"></div>
+        </div>
+
+        <div class="kids-score">
+          ⭐ Pontos: <strong id="kids-score">0</strong>
+          <span>•</span>
+          Desafio <strong id="kids-question-number">1</strong>/5
+        </div>
+
+        <div class="kids-question-card">
+
+          <div class="kids-situation" id="kids-situation">
+            🎮
+          </div>
+
+          <h3 id="kids-question">
+            Um jogador que você não conhece pede uma foto sua.
+            O que você faz?
+          </h3>
+
+          <div class="kids-options">
+
+            <button class="kids-option" onclick="answerKids(0)">
+              📸
+              <span>Envio a foto para ele.</span>
+            </button>
+
+            <button class="kids-option" onclick="answerKids(1)">
+              🛑
+              <span>Não envio e conto para um adulto de confiança.</span>
+            </button>
+
+            <button class="kids-option" onclick="answerKids(2)">
+              🤫
+              <span>Guardo segredo.</span>
+            </button>
+
+          </div>
+
+          <div id="kids-feedback" class="kids-feedback"></div>
+
+        </div>
+
+        <div id="kids-result" class="kids-result" style="display:none;">
+
+          <div class="kids-trophy">
+            🏆
+          </div>
+
+          <h2>Missão cumprida!</h2>
+
+          <p>
+            Você completou o desafio de segurança digital.
+          </p>
+
+          <div class="kids-final-score">
+            <span>Seu resultado</span>
+            <strong id="kids-final-score">0/5</strong>
+          </div>
+
+          <p class="kids-final-message">
+            Lembre-se:
+            <strong>
+              se algo na internet parecer estranho, pare e conte para um adulto de confiança.
+            </strong>
+          </p>
+
+          <button class="kids-restart" onclick="restartKidsGame()">
+            🔄 Jogar novamente
+          </button>
+
         </div>
 
       </div>

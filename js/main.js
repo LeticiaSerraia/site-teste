@@ -209,3 +209,336 @@ document.addEventListener('click', (e) => {
     card.classList.toggle('flipped');
   }
 });
+/* =========================================================
+   DESAFIO DO DETETIVE DIGITAL
+========================================================= */
+
+const kidsQuestions = [
+  {
+    emoji: "📸",
+
+    question:
+      "Um jogador que você não conhece pede uma foto sua. O que você faz?",
+
+    options: [
+      "📸 Envio a foto para ele.",
+      "🛑 Não envio e conto para um adulto de confiança.",
+      "🤫 Guardo segredo."
+    ],
+
+    correct: 1,
+
+    feedback:
+      "Muito bem! Pessoas desconhecidas não precisam receber suas fotos. Se algo parecer estranho, conte para um adulto de confiança."
+  },
+
+  {
+    emoji: "🎁",
+
+    question:
+      "Alguém promete moedas grátis no seu jogo e manda um link. O que você faz?",
+
+    options: [
+      "🔗 Clico rapidamente.",
+      "🎮 Passo minha senha para receber.",
+      "🛑 Não clico e peço ajuda a um adulto."
+    ],
+
+    correct: 2,
+
+    feedback:
+      "Isso! Links de prêmios podem ser armadilhas para roubar contas ou informações."
+  },
+
+  {
+    emoji: "🤫",
+
+    question:
+      "Uma pessoa online diz: 'Não conte para ninguém sobre nossa conversa'. O que você faz?",
+
+    options: [
+      "🤐 Prometo guardar segredo.",
+      "🗣️ Conto para um adulto de confiança.",
+      "👍 Continuo conversando normalmente."
+    ],
+
+    correct: 1,
+
+    feedback:
+      "Muito bem! Uma pessoa que pede para você esconder uma conversa de adultos de confiança merece atenção."
+  },
+
+  {
+    emoji: "📍",
+
+    question:
+      "Uma pessoa que você conheceu na internet quer saber onde você mora. O que você faz?",
+
+    options: [
+      "📍 Passo meu endereço.",
+      "🛑 Não informo e conto para um adulto.",
+      "💬 Pergunto onde ela mora."
+    ],
+
+    correct: 1,
+
+    feedback:
+      "Correto! Seu endereço, escola e rotina são informações pessoais que devem ser protegidas."
+  },
+
+  {
+    emoji: "😨",
+
+    question:
+      "Uma conversa na internet deixa você com medo ou desconfortável. O que você faz?",
+
+    options: [
+      "😶 Continuo sozinho.",
+      "🔥 Apago tudo e não conto para ninguém.",
+      "🛑 Paro a conversa e conto para um adulto de confiança."
+    ],
+
+    correct: 2,
+
+    feedback:
+      "Perfeito! Quando algo te deixa com medo ou desconfortável: PARE, SAIA DA CONVERSA E CONTE."
+  }
+];
+
+let kidsCurrentQuestion = 0;
+let kidsScore = 0;
+let kidsAnswered = false;
+
+
+/* =========================================================
+   INICIAR JOGO
+========================================================= */
+
+function startKidsGame() {
+
+  kidsCurrentQuestion = 0;
+
+  kidsScore = 0;
+
+  kidsAnswered = false;
+
+  const result = document.getElementById("kids-result");
+  const questionCard =
+    document.querySelector(".kids-question-card");
+
+  if (result) {
+    result.style.display = "none";
+  }
+
+  if (questionCard) {
+    questionCard.style.display = "block";
+  }
+
+  updateKidsQuestion();
+}
+
+
+/* =========================================================
+   MOSTRAR PERGUNTA
+========================================================= */
+
+function updateKidsQuestion() {
+
+  const question =
+    kidsQuestions[kidsCurrentQuestion];
+
+  if (!question) return;
+
+  kidsAnswered = false;
+
+  const situation =
+    document.getElementById("kids-situation");
+
+  const title =
+    document.getElementById("kids-question");
+
+  const questionNumber =
+    document.getElementById("kids-question-number");
+
+  const progress =
+    document.getElementById("kids-progress-bar");
+
+  const feedback =
+    document.getElementById("kids-feedback");
+
+  const score =
+    document.getElementById("kids-score");
+
+  situation.textContent = question.emoji;
+
+  title.textContent = question.question;
+
+  questionNumber.textContent =
+    kidsCurrentQuestion + 1;
+
+  score.textContent = kidsScore;
+
+  progress.style.width =
+    `${((kidsCurrentQuestion + 1) / kidsQuestions.length) * 100}%`;
+
+  feedback.className = "kids-feedback";
+
+  feedback.innerHTML = "";
+
+  const buttons =
+    document.querySelectorAll(".kids-option");
+
+  buttons.forEach((button, index) => {
+
+    button.disabled = false;
+
+    button.style.opacity = "1";
+
+    button.style.pointerEvents = "auto";
+
+    button.innerHTML =
+      `<span>${question.options[index]}</span>`;
+  });
+}
+
+
+/* =========================================================
+   RESPONDER
+========================================================= */
+
+function answerKids(answer) {
+
+  if (kidsAnswered) return;
+
+  kidsAnswered = true;
+
+  const question =
+    kidsQuestions[kidsCurrentQuestion];
+
+  const feedback =
+    document.getElementById("kids-feedback");
+
+  const buttons =
+    document.querySelectorAll(".kids-option");
+
+  buttons.forEach(button => {
+
+    button.disabled = true;
+
+    button.style.pointerEvents = "none";
+  });
+
+
+  if (answer === question.correct) {
+
+    kidsScore++;
+
+    feedback.className =
+      "kids-feedback correct";
+
+    feedback.innerHTML =
+      `🌟 <strong>Muito bem!</strong><br>${question.feedback}`;
+
+  } else {
+
+    feedback.className =
+      "kids-feedback wrong";
+
+    feedback.innerHTML =
+      `💡 <strong>Quase!</strong><br>${question.feedback}`;
+  }
+
+
+  document.getElementById(
+    "kids-score"
+  ).textContent = kidsScore;
+
+
+  setTimeout(() => {
+
+    kidsCurrentQuestion++;
+
+    if (
+      kidsCurrentQuestion <
+      kidsQuestions.length
+    ) {
+
+      updateKidsQuestion();
+
+    } else {
+
+      finishKidsGame();
+
+    }
+
+  }, 2200);
+}
+
+
+/* =========================================================
+   FINALIZAR
+========================================================= */
+
+function finishKidsGame() {
+
+  const questionCard =
+    document.querySelector(".kids-question-card");
+
+  const result =
+    document.getElementById("kids-result");
+
+  const finalScore =
+    document.getElementById("kids-final-score");
+
+  const progress =
+    document.getElementById("kids-progress-bar");
+
+  questionCard.style.display = "none";
+
+  result.style.display = "block";
+
+  finalScore.textContent =
+    `${kidsScore}/${kidsQuestions.length}`;
+
+  progress.style.width = "100%";
+}
+
+
+/* =========================================================
+   JOGAR NOVAMENTE
+========================================================= */
+
+function restartKidsGame() {
+
+  const questionCard =
+    document.querySelector(".kids-question-card");
+
+  const result =
+    document.getElementById("kids-result");
+
+  questionCard.style.display = "block";
+
+  result.style.display = "none";
+
+  startKidsGame();
+}
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    if (
+      document.getElementById("kids-question")
+    ) {
+
+      startKidsGame();
+
+    }
+
+  }
+);
