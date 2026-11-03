@@ -408,6 +408,7 @@ function updateKidsQuestion() {
 
 function answerKids(answer) {
 
+
   if (kidsAnswered) return;
 
   kidsAnswered = true;
@@ -423,6 +424,10 @@ function answerKids(answer) {
 
   buttons.forEach(button => {
 
+      button.classList.remove("correct", "wrong");
+  
+      button.disabled = false;
+
     button.disabled = true;
 
     button.style.pointerEvents = "none";
@@ -430,6 +435,12 @@ function answerKids(answer) {
 
 
   if (answer === question.correct) {
+
+    buttons[question.correct].classList.add("correct");
+
+    if (answer !== question.correct) {
+      buttons[answer].classList.add("wrong");
+    }
 
     kidsScore++;
 
