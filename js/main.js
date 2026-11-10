@@ -1,3 +1,8 @@
+// Ícone de olho (sprite SVG do index.html)
+function eyeIcon(name) {
+  return '<svg class="ico" aria-hidden="true"><use href="#i-' + name + '"></use></svg>';
+}
+
 // Aguarda a página carregar completamente antes de iniciar funcionalidades base
 document.addEventListener('DOMContentLoaded', () => {
   renderQuiz();
@@ -165,10 +170,10 @@ function togglePassView() {
   const btn = document.getElementById('toggleBtn');
   if (input.type === 'password') {
     input.type = 'text';
-    btn.textContent = '🙈';
+    btn.innerHTML = eyeIcon('eye-off');
   } else {
     input.type = 'password';
-    btn.textContent = '👁️';
+    btn.innerHTML = eyeIcon('eye');
   }
 }
 
@@ -194,7 +199,7 @@ function generateStrongPass() {
   const input = document.getElementById('inputPass');
   input.value = pass;
   input.type = 'text';
-  document.getElementById('toggleBtn').textContent = '🙈';
+  document.getElementById('toggleBtn').innerHTML = eyeIcon('eye-off');
   evaluatePassword();
 
   const box = document.getElementById('passBox');
